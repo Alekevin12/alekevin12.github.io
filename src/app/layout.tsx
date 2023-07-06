@@ -18,7 +18,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className='transition-all duration-700'>
+    <html lang="en" className='scroll-smooth'>
       <body className={`${inter.className} relative`}>
         <Providers>
           <ThemeToggle />

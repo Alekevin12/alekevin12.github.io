@@ -16,26 +16,35 @@ export default function NavigationAside() {
   }
 
   useEffect(() => {
+    let timeoutId: NodeJS.Timeout;
+
     const handleScroll = () => {
-      const sections = document.querySelectorAll<HTMLDivElement>("section[id]")
-      const scrollPosition = window.scrollY;
+      if (timeoutId) {
+        clearTimeout(timeoutId);
+      }
 
-      sections.forEach((section) => {
-        const sectionTop = section.offsetTop
-        const sectionBottom = sectionTop + section.offsetHeight
+      timeoutId = setTimeout(() => {
+        const sections = document.querySelectorAll<HTMLDivElement>("section[id]")
+        const scrollPosition = window.scrollY;
 
-        if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
-          const sectionId = `#${section.id}`
-          window.history.replaceState(null, "", sectionId)
-          setCurrentHash(sectionId)
-        }
-      })
+        sections.forEach((section) => {
+          const sectionTop = section.offsetTop - 16; // Default Margin
+          const sectionBottom = sectionTop + section.offsetHeight
+
+          if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+            const sectionId = `#${section.id}`
+            window.history.replaceState(null, "", sectionId)
+            setCurrentHash(sectionId)
+          }
+        })
+      }, 75); // Debounce
     }
 
     window.addEventListener("scroll", handleScroll)
 
     return () => {
       window.removeEventListener("scroll", handleScroll)
+      clearTimeout(timeoutId);
     }
   }, [])
 

@@ -13,10 +13,10 @@
 } */
 
 
-/* html body {
+html body {
   @apply bg-zinc-50 text-zinc-900
 }
 
 html.dark body {
-  @apply bg-zinc-900 text-white
-} */
+  @apply bg-zinc-800 text-white
+}
