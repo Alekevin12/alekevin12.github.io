@@ -1,6 +1,9 @@
-export default function ProfileAside() {
+import { WithTranslation } from "react-i18next";
+import { Locale } from "@/src/app/i18n/settings";
+
+export default function ProfileAside({t, lang}: {t: WithTranslation['t'], lang: Locale}) {
   return (
-    <aside className="mt-8 w-full xl:w-1/4 rounded-2xl border-2 border-zinc-900 dark:border-gray-500 xl:mt-2 xl:me-4">
+    <aside className="card mt-8 xl:mt-2 xl:me-4 w-full h-fit xl:w-1/4 xl:sticky xl:top-4">
       ProfileAside
     </aside>
   )

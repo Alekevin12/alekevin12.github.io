@@ -11,7 +11,7 @@ export default function Providers({ children }: ProvidersProps) {
     <ThemeProvider
       attribute="class"
       storageKey="ak-portfolio-theme"
-      disableTransitionOnChange
+      disableTransitionOnChange={false}
     >
       {children}
     </ThemeProvider>

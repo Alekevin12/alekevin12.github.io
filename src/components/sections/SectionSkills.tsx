@@ -1,6 +1,9 @@
-export default function SectionSkills() {
+import { Locale } from "@/src/app/i18n/settings";
+import { WithTranslation } from "react-i18next";
+
+export default function SectionSkills({t, lang}: {t: WithTranslation['t'], lang: Locale}) {
   return (
-    <section id="skills" style={{height: '600px'}} className="mt-8 min-h-screen rounded-2xl border-2 border-zinc-900 dark:border-gray-500 xl:mt-2">
+    <section id="skills" style={{height: '600px'}} className="mt-8 min-h-screen card xl:mt-2">
       SectionSkills
     </section>
   )

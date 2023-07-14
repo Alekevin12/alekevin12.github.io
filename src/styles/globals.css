@@ -13,10 +13,11 @@
 } */
 
 
-html body {
-  @apply bg-zinc-50 text-zinc-900
+:is(body, section, aside) {
+  @apply bg-zinc-50 text-zinc-900 dark:bg-zinc-800 dark:text-white
+  will-change-[background-color,color] transition-colors duration-300 
 }
 
-html.dark body {
-  @apply bg-zinc-800 text-white
+.card {
+  @apply border-zinc-900 dark:border-gray-500 border-2 rounded-2xl;
 }

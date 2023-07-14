@@ -3,16 +3,19 @@
 import { FolderGit2, Home, Lightbulb, Mail, User2 } from "lucide-react"
 import Link from "next/link"
 import { useEffect, useState } from "react"
+import { Locale } from "@/src/app/i18n/settings"
+import { useTranslation } from "@/src/app/i18n/client"
 
-export default function NavigationAside() {
-  const [currentHash, setCurrentHash] = useState("#")
+export default function NavigationAside({lang}: { lang: Locale}) {
+  const [currentHash, setCurrentHash] = useState("#intro");
+  const tNavigationAside = useTranslation(lang, 'NavigationAside');
   globalThis.onhashchange = () => {
     if (!location.hash) {
-      setCurrentHash("#")
+      goToHash("#intro")
       return
     }
 
-    setCurrentHash(location.hash)
+    goToHash(location.hash)
   }
 
   useEffect(() => {
@@ -46,16 +49,27 @@ export default function NavigationAside() {
       window.removeEventListener("scroll", handleScroll)
       clearTimeout(timeoutId);
     }
-  }, [])
+  }, []);
+
+  function goToHash(id: string, event: Event | null = null) {
+    if (event) {
+      event.preventDefault();
+      event.cancelBubble = true;
+      event.stopPropagation();
+    }
+
+    document.querySelector(id)?.scrollIntoView({ behavior: 'smooth' });
+    setCurrentHash(id);
+  }
 
   return (
     <aside className="fixed right-8 top-1/2 hidden -translate-y-1/2 rounded-full border-2 border-zinc-900 p-4 dark:border-gray-500 xl:block">
       <ul className="flex list-none flex-col">
         <li className="mb-2">
-          <Link href="/#" onClick={() => setCurrentHash("#")}>
+          <Link href="/#intro" onClick={(event) => goToHash("#intro", event as any)}>
             <Home
               className={
-                currentHash === "#"
+                currentHash === "#intro"
                   ? "text-light-accent dark:text-dark-accent"
                   : ""
               }
@@ -63,7 +77,7 @@ export default function NavigationAside() {
           </Link>
         </li>
         <li className="my-2">
-          <Link href="/#about" onClick={() => setCurrentHash("#about")}>
+          <Link href="/#about" onClick={(event) => goToHash("#about", event as any)}>
             <User2
               className={
                 currentHash === "#about"
@@ -74,7 +88,7 @@ export default function NavigationAside() {
           </Link>
         </li>
         <li className="my-2">
-          <Link href="/#skills" onClick={() => setCurrentHash("#skills")}>
+          <Link href="/#skills" onClick={(event) => goToHash("#skills", event as any)}>
             <Lightbulb
               className={
                 currentHash === "#skills"
@@ -85,7 +99,7 @@ export default function NavigationAside() {
           </Link>
         </li>
         <li className="my-2">
-          <Link href="/#projects" onClick={() => setCurrentHash("#projects")}>
+          <Link href="/#projects" onClick={(event) => goToHash("#projects", event as any)}>
             <FolderGit2
               className={
                 currentHash === "#projects"
@@ -96,7 +110,7 @@ export default function NavigationAside() {
           </Link>
         </li>
         <li className="mt-2">
-          <Link href="/#contact" onClick={() => setCurrentHash("#contact")}>
+          <Link href="/#contact" onClick={(event) => goToHash("#contact", event as any)}>
             <Mail
               className={
                 currentHash === "#contact"
