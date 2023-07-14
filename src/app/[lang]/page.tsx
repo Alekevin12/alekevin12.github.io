@@ -3,10 +3,12 @@ import SectionContact from "@/src/components/sections/SectionContact";
 import SectionIntro from "@/src/components/sections/SectionIntro";
 import SectionProjects from "@/src/components/sections/SectionProjects";
 import SectionSkills from "@/src/components/sections/SectionSkills";
-import { Locale } from "@/src/app/i18n/settings";
+import { Locale, i18n } from "@/src/app/i18n/settings";
 import { useTranslation } from "@/src/app/i18n";
+import { GetStaticPaths } from "next";
 
-export default async function Home({
+
+export default async function Page({
   params: { lang: locale }
 }: {
   params: { lang: Locale }
