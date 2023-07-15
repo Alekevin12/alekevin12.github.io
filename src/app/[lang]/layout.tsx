@@ -7,7 +7,7 @@ import '@/src/styles/globals.css';
 import { dir } from 'i18next';
 import { Inter } from 'next/font/google';
 import { useTranslation } from '@/src/app/i18n';
-import GoogleAnalytics from '@/src/components/Analytics/GoogleAnalytics';
+import { Analytics } from '@vercel/analytics/react';
 
 const inter = Inter({ subsets: ['latin'] })
 export const metadata = {
@@ -31,6 +31,7 @@ export default async function RootLayout({
   return (
     <html lang={locale} dir={dir(locale)}>
       <body className={`${inter.className} relative`}>
+        <Analytics />
         <Providers>
           <ThemeToggle lang={locale} />
           <main className='relative flex flex-col xl:flex-row container p-2 mx-auto'>
