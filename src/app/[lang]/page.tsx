@@ -1,8 +1,8 @@
-import SectionAbout from "@/src/components/sections/SectionAbout";
-import SectionContact from "@/src/components/sections/SectionContact";
-import SectionIntro from "@/src/components/sections/SectionIntro";
-import SectionProjects from "@/src/components/sections/SectionProjects";
-import SectionSkills from "@/src/components/sections/SectionSkills";
+import SectionAbout from "@/src/components/Sections/SectionAbout";
+import SectionContact from "@/src/components/Sections/SectionContact";
+import SectionIntro from "@/src/components/Sections/SectionIntro";
+import SectionProjects from "@/src/components/Sections/SectionProjects";
+import SectionSkills from "@/src/components/Sections/SectionSkills";
 import { Locale, i18n } from "@/src/app/i18n/settings";
 import { useTranslation } from "@/src/app/i18n";
 import { GetStaticPaths } from "next";
