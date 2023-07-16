@@ -9,7 +9,7 @@ import { Locale } from "../app/i18n/settings"
 export default function ThemeToggle({ lang }: { lang: Locale }) {
   const { theme, setTheme } = useTheme();
   const [hasMounted, setHasMounted] = useState(false);
-  const tThemeToggle = useTranslation(lang, 'ThemeToggle');
+  const tThemeToggle = useTranslation(lang, 'ThemeToggle')?.t;
 
   const toggleTheme = () => setTheme(theme === "light" ? "dark" : "light")
 
@@ -17,9 +17,10 @@ export default function ThemeToggle({ lang }: { lang: Locale }) {
     setHasMounted(true)
   }, [])
 
-  if (!hasMounted) return null
+  if (!hasMounted) return null;
+  
   return (
-    <button className="absolute right-4 top-2 xl:right-2" onClick={toggleTheme}>
+    <button className="absolute right-4 top-2 xl:right-2" onClick={toggleTheme} aria-label={tThemeToggle(`aria-label-${theme}`)} title={tThemeToggle(`aria-label-${theme}`)}>
       {theme === "light" ? <Moon /> : <Sun />}
     </button>
   )

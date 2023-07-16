@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import i18next from 'i18next'
-import { initReactI18next, useTranslation as useTranslationOrg } from 'react-i18next'
+import { UseTranslationResponse, initReactI18next, useTranslation as useTranslationOrg } from 'react-i18next'
 import resourcesToBackend from 'i18next-resources-to-backend'
 import LanguageDetector from 'i18next-browser-languagedetector'
 import { Locale, getOptions, i18n } from './settings'

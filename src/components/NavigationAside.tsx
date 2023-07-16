@@ -8,7 +8,7 @@ import { useTranslation } from "@/src/app/i18n/client"
 
 export default function NavigationAside({lang}: { lang: Locale}) {
   const [currentHash, setCurrentHash] = useState("#intro");
-  const tNavigationAside = useTranslation(lang, 'NavigationAside');
+  const tNavigationAside = useTranslation(lang, 'NavigationAside')?.t;
   globalThis.onhashchange = () => {
     if (!location.hash) {
       goToHash("#intro")
@@ -66,7 +66,7 @@ export default function NavigationAside({lang}: { lang: Locale}) {
     <aside className="fixed right-8 top-1/2 hidden -translate-y-1/2 rounded-full border-2 border-zinc-900 p-4 dark:border-gray-500 xl:block">
       <ul className="flex list-none flex-col">
         <li className="mb-2">
-          <Link href="/#intro" onClick={(event) => goToHash("#intro", event as any)}>
+          <Link href="/#intro" onClick={(event) => goToHash("#intro", event as any)} aria-label={tNavigationAside('link-intro')} title={tNavigationAside('link-intro')}>
             <Home
               className={
                 currentHash === "#intro"
@@ -77,7 +77,7 @@ export default function NavigationAside({lang}: { lang: Locale}) {
           </Link>
         </li>
         <li className="my-2">
-          <Link href="/#about" onClick={(event) => goToHash("#about", event as any)}>
+          <Link href="/#about" onClick={(event) => goToHash("#about", event as any)} aria-label={tNavigationAside('link-about')} title={tNavigationAside('link-about')}>
             <User2
               className={
                 currentHash === "#about"
@@ -88,7 +88,7 @@ export default function NavigationAside({lang}: { lang: Locale}) {
           </Link>
         </li>
         <li className="my-2">
-          <Link href="/#skills" onClick={(event) => goToHash("#skills", event as any)}>
+          <Link href="/#skills" onClick={(event) => goToHash("#skills", event as any)} aria-label={tNavigationAside('link-skills')} title={tNavigationAside('link-skills')}>
             <Lightbulb
               className={
                 currentHash === "#skills"
@@ -99,7 +99,7 @@ export default function NavigationAside({lang}: { lang: Locale}) {
           </Link>
         </li>
         <li className="my-2">
-          <Link href="/#projects" onClick={(event) => goToHash("#projects", event as any)}>
+          <Link href="/#projects" onClick={(event) => goToHash("#projects", event as any)} aria-label={tNavigationAside('link-projects')} title={tNavigationAside('link-projects')}>
             <FolderGit2
               className={
                 currentHash === "#projects"
@@ -110,7 +110,7 @@ export default function NavigationAside({lang}: { lang: Locale}) {
           </Link>
         </li>
         <li className="mt-2">
-          <Link href="/#contact" onClick={(event) => goToHash("#contact", event as any)}>
+          <Link href="/#contact" onClick={(event) => goToHash("#contact", event as any)} aria-label={tNavigationAside('link-contact')} title={tNavigationAside('link-contact')}>
             <Mail
               className={
                 currentHash === "#contact"
