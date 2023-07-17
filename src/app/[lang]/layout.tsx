@@ -11,8 +11,11 @@ import { Analytics } from '@vercel/analytics/react';
 
 const inter = Inter({ subsets: ['latin'] })
 export const metadata = {
-  title: 'Alekevin12 | Home',
-  description: 'Homepage',
+  title: 'Alekevin12 | Portfolio',
+  description: 'Alessandro Richetto\'s portfolio website',
+  keywords: 'portfolio, CV, curriculum vitae, developer, web developer, fullstack developer, full-stack developer, full stack developer, open to work, angular developer, typescript developer, programming lover, front end developer, frontend developer',
+  robots: 'index, follow',
+  author: 'Alessandro Richetto',
 }
 
 export async function generateStaticParams() {
@@ -30,6 +33,14 @@ export default async function RootLayout({
 
   return (
     <html lang={locale} dir={dir(locale)}>
+      <head>
+        <meta name="language" content={locale} />
+        <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="manifest" href="/manifest.json" />
+      </head>
       <body className={`${inter.className} relative`}>
         <Analytics />
         <Providers>
