@@ -19,5 +19,21 @@
 }
 
 .card {
-  @apply border-zinc-900 dark:border-gray-500 border-2 rounded-2xl;
+  @apply border-zinc-900 dark:border-gray-500 border rounded-2xl mb-4;
+}
+
+.text-muted {
+  @apply text-zinc-600 dark:text-gray-500
+}
+
+[data-test-id="CircularProgressbarWithChildren__children"] {
+  @apply top-0 !mt-0
+}
+
+.c-skillcard__standard {
+  @apply card !mb-0 flex-col text-center md:flex md:flex-row h-min items-center p-4 transition-all delay-200 duration-700 ease-[cubic-bezier(0.17,0.55,0.55,1)];
+}
+
+.c-skillcard__inline {
+  @apply card !mb-0 text-center flex flex-row h-min items-center p-4 transition-all delay-200 duration-700 ease-[cubic-bezier(0.17,0.55,0.55,1)]
 }

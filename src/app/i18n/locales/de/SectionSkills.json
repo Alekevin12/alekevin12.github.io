@@ -1,3 +1,13 @@
 {
+  "Title": "Kompetenzen",
+  "SkillsLanguages": "Meine fortgeschrittenen Fähigkeiten",
+  "SkillsBaseKnowledge": "Meine Grundkenntnisse",
+  "SkillsDatabases": "Datenbank",
+  "SkillsTools": "Werkzeuge in meinem Arbeitsablauf",
+  "SkillsAnalytics": "Analyse-Tools",
+  "SkillsIDE": "IDEs, die ich kenne",
+  "SkillsProjectManagement": "Werkzeuge für die agile Methodik",
+  "SkillsOS": "Betriebssysteme",
+  "SkillsLearning": "Lernsprachen",
   "### END ###": {}
 }

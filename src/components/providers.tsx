@@ -1,5 +1,6 @@
 "use client"
 
+import { LazyMotion, domAnimation } from "framer-motion"
 import { ThemeProvider } from "next-themes"
 
 interface ProvidersProps {
@@ -13,7 +14,9 @@ export default function Providers({ children }: ProvidersProps) {
       storageKey="ak-portfolio-theme"
       disableTransitionOnChange={false}
     >
-      {children}
+      <LazyMotion strict features={domAnimation}>
+        {children}
+      </LazyMotion>
     </ThemeProvider>
   )
 }

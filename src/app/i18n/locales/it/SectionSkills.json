@@ -1,3 +1,13 @@
 {
+  "Title": "Skills",
+  "SkillsLanguages": "La mia expertise",
+  "SkillsBaseKnowledge": "Conoscenze di base",
+  "SkillsDatabases": "Database",
+  "SkillsTools": "Strumenti nel mio workflow",
+  "SkillsAnalytics": "Strumenti di analytics",
+  "SkillsIDE": "IDE che conosco",
+  "SkillsProjectManagement": "Strumenti di metodologia agile",
+  "SkillsOS": "Sistemi operativi",
+  "SkillsLearning": "Linguaggi in apprendimento",
   "### END ###": {}
 }

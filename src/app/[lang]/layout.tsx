@@ -29,6 +29,7 @@ export default async function RootLayout({
   children: React.ReactNode
   params: { lang: Locale }
 }) {
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const tProfileAside = (await useTranslation(locale, 'ProfileAside'))?.t;
 
   return (
@@ -41,7 +42,7 @@ export default async function RootLayout({
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="manifest" href="/manifest.json" />
       </head>
-      <body className={`${inter.className} relative`}>
+      <body className={`${inter.className} pt-8`}>
         <Analytics />
         <Providers>
           <ThemeToggle lang={locale} />

@@ -36,8 +36,8 @@ export default function NavigationAside({lang}: { lang: Locale}) {
 
           if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
             const sectionId = `#${section.id}`
-            window.history.replaceState(null, "", sectionId)
-            setCurrentHash(sectionId)
+            setCurrentHash(sectionId);
+            window.history.replaceState(null, "", sectionId);
           }
         })
       }, 75); // Debounce
@@ -63,7 +63,7 @@ export default function NavigationAside({lang}: { lang: Locale}) {
   }
 
   return (
-    <aside className="fixed right-8 top-1/2 hidden -translate-y-1/2 rounded-full border-2 border-zinc-900 p-4 dark:border-gray-500 xl:block">
+    <aside className="fixed right-8 top-1/2 hidden -translate-y-1/2 rounded-full border border-zinc-900 dark:border-gray-500 p-4 xl:block">
       <ul className="flex list-none flex-col">
         <li className="mb-2">
           <Link href="/#intro" onClick={(event) => goToHash("#intro", event as any)} aria-label={tNavigationAside('link-intro')} title={tNavigationAside('link-intro')}>

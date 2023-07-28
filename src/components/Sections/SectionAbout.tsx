@@ -1,11 +1,27 @@
-import { useTranslation } from "@/src/app/i18n"
-import { Locale } from "@/src/app/i18n/settings"
-import { WithTranslation } from "react-i18next"
+"use client"
 
-export default async function SectionAbout({t, lang}: {t: WithTranslation['t'], lang: Locale}) {
+import { useTranslation } from "@/src/app/i18n/client"
+import { Locale } from "@/src/app/i18n/settings"
+import { m, useInView } from "framer-motion"
+import { useRef } from "react"
+
+export default function SectionAbout({ lang }: { lang: Locale }) {
+  const ref = useRef(null)
+  const isInView = useInView(ref, { once: true })
+  const tSectionAbout = useTranslation(lang, "SectionAbout")?.t
+
   return (
-    <section id="about" style={{height: '600px'}} className="mt-8 min-h-screen card xl:mt-2">
-      { t('TEST') }
-    </section>
+    <m.section
+      id="about"
+      ref={ref}
+      className="card mb-8 min-h-screen will-change-[transform,opacity] xl:mb-2"
+      style={{
+        transform: isInView ? "none" : "translateY(200px)",
+        opacity: isInView ? 1 : 0,
+        transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.2s",
+      }}
+    >
+      {tSectionAbout("TEST")}
+    </m.section>
   )
 }
