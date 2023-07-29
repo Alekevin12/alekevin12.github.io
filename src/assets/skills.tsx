@@ -1,4 +1,4 @@
-import { SiAngular, SiAngularjs, SiArchlinux, SiArduino, SiCsharp, SiCss3, SiDebian, SiDotnet, SiEslint, SiExpress, SiGnometerminal, SiGoogleanalytics, SiGoogletagmanager, SiGulp, SiHtml5, SiIcomoon, SiJavascript, SiJetbrains, SiJira, SiLaravel, SiLinux, SiLooker, SiMariadb, SiMicrosoftsqlserver, SiMongodb, SiMysql, SiNeovim, SiNextdotjs, SiNodedotjs, SiNotepadplusplus, SiNpm, SiOpenai, SiPhp, SiPowershell, SiPrettier, SiReact, SiRedmine, SiSass, SiScrumalliance, SiSpringboot, SiStylelint, SiSublimetext, SiTailwindcss, SiTypescript, SiUbuntu, SiVisualstudio, SiVisualstudiocode, SiVuedotjs, SiWindows, SiWindowsterminal } from "@icons-pack/react-simple-icons";
+import { SiAngular, SiAngularjs, SiArchlinux, SiArduino, SiCsharp, SiCss3, SiDebian, SiDotnet, SiEslint, SiExpress, SiFastify, SiGnometerminal, SiGoogleanalytics, SiGoogletagmanager, SiGulp, SiHtml5, SiIcomoon, SiJavascript, SiJetbrains, SiJira, SiLaravel, SiLinux, SiLooker, SiMariadb, SiMicrosoftsqlserver, SiMongodb, SiMysql, SiNeovim, SiNestjs, SiNextdotjs, SiNodedotjs, SiNotepadplusplus, SiNpm, SiOpenai, SiPhp, SiPowershell, SiPrettier, SiReact, SiRedmine, SiSass, SiScrumalliance, SiSpringboot, SiStylelint, SiSublimetext, SiTailwindcss, SiTypescript, SiUbuntu, SiVisualstudio, SiVisualstudiocode, SiVuedotjs, SiWindows, SiWindowsterminal } from "@icons-pack/react-simple-icons";
 
 export const SkillsLanguages = [
   { icon: <SiJavascript  size={36} color='default' />, name: 'JavaScript',   skillLevel: 80, translateX: -75, translateY: -20 },
@@ -23,14 +23,14 @@ export const SkillsBaseKnowledge = [
 
 export const SkillsDatabases = [
   { icon: <SiMysql              size={36} color='default' />, name: 'MySQL',                skillLevel: 70, translateX: -60, translateY: -90 },
-  { icon: <SiMariadb            size={36} color='default' />, name: 'MariaDB',              skillLevel: 70, translateX: -280, translateY: 30 },
+  { icon: <SiMariadb            size={36} color='#02495e' />, name: 'MariaDB',              skillLevel: 70, translateX: -280, translateY: 30 },
   { icon: <SiMongodb            size={36} color='default' />, name: 'MongoDB',              skillLevel: 70, translateX: 200, translateY: 200 },
   { icon: <SiMicrosoftsqlserver size={36} color='default' />, name: 'Microsoft SQL Server', skillLevel: 70, translateX: 180, translateY: 100 },
 ]
 
 export const SkillsTools = [
   { icon: <SiWindowsterminal size={36} color='default' />, name: 'Windows Terminal', skillLevel: null, translateX: 100, translateY: 120 },
-  { icon: <SiGnometerminal   size={36} color='default' />, name: 'Gnome Terminal',   skillLevel: null, translateX: 220, translateY: -200 },
+  { icon: <SiGnometerminal   size={36} color='#53486e' />, name: 'Gnome Terminal',   skillLevel: null, translateX: 220, translateY: -200 },
   { icon: <SiPowershell      size={36} color='default' />, name: 'Powershell',       skillLevel: null, translateX: -150, translateY: -80 },
   { icon: <SiNpm             size={36} color='default' />, name: 'NPM',              skillLevel: null, translateX: -180, translateY: 250 },
   { icon: <SiGulp            size={36} color='default' />, name: 'Gulp',             skillLevel: null, translateX: 80, translateY: -260 },
@@ -38,7 +38,7 @@ export const SkillsTools = [
   { icon: <SiOpenai          size={36} color='default' />, name: 'ChatGPT',          skillLevel: null, translateX: -220, translateY: -150 },
   { icon: <SiEslint          size={36} color='default' />, name: 'EsLint',           skillLevel: null, translateX: -120, translateY: 100 },
   { icon: <SiPrettier        size={36} color='default' />, name: 'Prettier',         skillLevel: null, translateX: -100, translateY: 250 },
-  { icon: <SiStylelint       size={36} color='default' />, name: 'StyleLint',        skillLevel: null, translateX: 150, translateY: 80 },
+  { icon: <SiStylelint       size={36} color='#495961' />, name: 'StyleLint',        skillLevel: null, translateX: 150, translateY: 80 },
 ]
 
 export const SkillsAnalytics = [
@@ -71,8 +71,10 @@ export const SkillsOS = [
 ]
 
 export const SkillsLearning = [
-  { icon: <SiSpringboot size={36} color='default' />, name: 'Springboot', skillLevel: null, translateX: -120, translateY: 200 },
-  { icon: <SiVuedotjs   size={36} color='default' />, name: 'Vue.js',     skillLevel: null, translateX: 200, translateY: -220 },
   { icon: <SiReact      size={36} color='default' />, name: 'React',      skillLevel: null, translateX: -260, translateY: 280 },
   { icon: <SiNextdotjs  size={36} color='default' />, name: 'Next.js',    skillLevel: null, translateX: 150, translateY: -260 },
+  { icon: <SiNestjs     size={36} color='default' />, name: 'NestJs',     skillLevel: null, translateX: 179, translateY: 153 },
+  { icon: <SiFastify    size={36} color='default' />, name: 'Fastify',    skillLevel: null, translateX: 257, translateY: -157 },
+  { icon: <SiSpringboot size={36} color='default' />, name: 'Springboot', skillLevel: null, translateX: -120, translateY: 200 },
+  { icon: <SiVuedotjs   size={36} color='default' />, name: 'Vue.js',     skillLevel: null, translateX: 200, translateY: -220 },
 ]

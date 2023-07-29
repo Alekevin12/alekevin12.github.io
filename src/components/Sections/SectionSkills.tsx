@@ -6,14 +6,20 @@ import { SkillCard } from "../Cards/SkillCard";
 import { SkillsAnalytics, SkillsBaseKnowledge, SkillsDatabases, SkillsIDE, SkillsLanguages, SkillsLearning, SkillsOS, SkillsProjectManagement, SkillsTools } from "@/src/assets/skills";
 import React from "react";
 import { LucideLightbulb } from "lucide-react";
+import { SectionBadge } from "./SectionBadge";
 
 export default function SectionSkills({lang}: {lang: Locale}) {
   const tSectionSkills = useTranslation(lang, 'SectionSkills')?.t;
   return (
     <section id="skills" className="mb-8 min-h-screen xl:mb-2">
-      <span className="card flex flex-row w-min p-1 pr-2 text-[10px] text-center align-middle uppercase items-center"> 
-        <LucideLightbulb height={12} width={12} className="mr-1" /> {tSectionSkills('Title')} 
-      </span>
+      <SectionBadge>
+        <SectionBadge.Icon>
+          <LucideLightbulb height={12} width={12} className="mr-1" /> 
+        </SectionBadge.Icon>
+        <SectionBadge.Text>
+          {tSectionSkills('Title')}
+        </SectionBadge.Text> 
+      </SectionBadge>
       <h3 className="text-3xl mb-2">{tSectionSkills('SkillsLanguages')}</h3>
       <SkillsContainer skills={SkillsLanguages} />
       <h3 className="text-3xl mb-2">{tSectionSkills('SkillsBaseKnowledge')}</h3>
