@@ -58,7 +58,7 @@ export default function NavigationAside({lang}: { lang: Locale}) {
       event.stopPropagation();
     }
 
-    document.querySelector(id)?.scrollIntoView({ behavior: 'smooth' });
+    document.querySelector(`${id}Badge`)?.scrollIntoView({ behavior: 'smooth' });
     setCurrentHash(id);
   }
 
