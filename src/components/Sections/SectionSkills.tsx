@@ -3,7 +3,6 @@
 import { useTranslation } from "@/src/app/i18n/client";
 import { Locale } from "@/src/app/i18n/settings";
 import { SkillCard } from "../Cards/SkillCard";
-import 'react-circular-progressbar/dist/styles.css';
 import { SkillsAnalytics, SkillsBaseKnowledge, SkillsDatabases, SkillsIDE, SkillsLanguages, SkillsLearning, SkillsOS, SkillsProjectManagement, SkillsTools } from "@/src/assets/skills";
 import React from "react";
 import { LucideLightbulb } from "lucide-react";
