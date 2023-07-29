@@ -31,13 +31,16 @@ export default function SectionAbout({ lang }: { lang: Locale }) {
           opacity: isInView ? 1 : 0,
         }}
       >
-        {tSectionAbout("DescriptionP1")} <br /><br />
-        {tSectionAbout("DescriptionP2")} <br /><br />
-        {tSectionAbout("DescriptionP3")} <br /><br />
-        {tSectionAbout("DescriptionP4")} <br /><br />
-        {tSectionAbout("DescriptionP5")} <br /><br />
-        {tSectionAbout("DescriptionP6")} <br /><br />
-        {tSectionAbout("DescriptionP7")} <br /><br />
+        <p className="mb-2" dangerouslySetInnerHTML={{ __html: tSectionAbout("DescriptionP1") }}></p>
+        <p className="mb-2" dangerouslySetInnerHTML={{ __html: tSectionAbout("DescriptionP2") }}></p>
+        <p className="mb-2" dangerouslySetInnerHTML={{ __html: tSectionAbout("DescriptionP3") }}></p>
+        <p className="mb-2" dangerouslySetInnerHTML={{ __html: tSectionAbout("DescriptionP4") }}></p>
+        <p className="mb-2" dangerouslySetInnerHTML={{ __html: tSectionAbout("DescriptionP5") }}></p>
+        <p className="mb-2" dangerouslySetInnerHTML={{ __html: tSectionAbout("DescriptionP6") }}></p>
+
+        <p className="text-dark-accent underline decoration-dark-accent underline-offset-4 mb-2">
+          {tSectionAbout("DescriptionP7")}
+        </p>
       </m.section>
     </>
   )
