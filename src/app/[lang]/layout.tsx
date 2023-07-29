@@ -1,3 +1,5 @@
+'use client';
+
 import { Locale, i18n } from '@/src/app/i18n/settings';
 import NavigationAside from '@/src/components/NavigationAside';
 import ProfileAside from '@/src/components/ProfileAside';
@@ -6,23 +8,13 @@ import Providers from '@/src/components/providers';
 import '@/src/styles/globals.css';
 import { dir } from 'i18next';
 import { Inter } from 'next/font/google';
-import { useTranslation } from '@/src/app/i18n';
+import { useTranslation } from '@/src/app/i18n/client';
 import { Analytics } from '@vercel/analytics/react';
+import { Footer } from '@/src/components/Footer';
 
 const inter = Inter({ subsets: ['latin'] })
-export const metadata = {
-  title: 'Alekevin12 | Portfolio',
-  description: 'Alessandro Richetto\'s portfolio website',
-  keywords: 'portfolio, CV, curriculum vitae, developer, web developer, fullstack developer, full-stack developer, full stack developer, open to work, angular developer, typescript developer, programming lover, front end developer, frontend developer',
-  robots: 'index, follow',
-  author: 'Alessandro Richetto',
-}
 
-export async function generateStaticParams() {
-  return i18n.locales.map((locale) => ({ params: { lang: locale }}))
-}
-
-export default async function RootLayout({
+export default function RootLayout({
   children,
   params: { lang: locale }
 }: {
@@ -30,10 +22,10 @@ export default async function RootLayout({
   params: { lang: Locale }
 }) {
   // eslint-disable-next-line react-hooks/rules-of-hooks
-  const tProfileAside = (await useTranslation(locale, 'ProfileAside'))?.t;
+  const tProfileAside = (useTranslation(locale, 'ProfileAside'))?.t;
 
   return (
-    <html lang={locale} dir={dir(locale)}>
+    <html lang={locale} dir={dir(locale)} className='overflow-x-hidden print:hidden'>
       <head>
         <meta name="language" content={locale} />
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
@@ -41,8 +33,13 @@ export default async function RootLayout({
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="manifest" href="/manifest.json" />
+        <title>Alessandro Richetto | Portfolio</title>
+        <meta name='description' content="Alessandro Richetto's portfolio website" />
+        <meta name='robots' content='index, follow' />
+        <meta name='author' content='Alessandro Richetto' />
+        <meta name='keywords' content='portfolio, CV, curriculum vitae, developer, web developer, fullstack developer, full-stack developer, full stack developer, open to work, angular developer, typescript developer, programming lover, front end developer, frontend developer' />
       </head>
-      <body className={`${inter.className} pt-8`}>
+      <body className={`${inter.className} pt-8 overflow-x-hidden`}>
         <Analytics />
         <Providers>
           <ThemeToggle lang={locale} />
@@ -51,6 +48,7 @@ export default async function RootLayout({
             {children}
             <NavigationAside lang={locale} />
           </main>
+          <Footer />
         </Providers>
       </body>
     </html>

@@ -1,8 +1,8 @@
 import React from "react";
 
-function SectionBadge({ children }: { children: React.ReactNode}) {
+function SectionBadge({ children, id, className = "" }: { children: React.ReactNode, id: string, className?: string}) {
   return (
-    <span className="card flex flex-row w-fit p-1 pr-2 text-[10px] text-center align-middle uppercase items-center"> 
+    <span id={id} className={'card flex flex-row w-fit p-1 pr-2 text-[10px] text-center align-middle uppercase items-center ' + className}> 
       {children}
     </span>
   )

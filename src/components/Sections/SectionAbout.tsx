@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { useTranslation } from "@/src/app/i18n/client"
 import { Locale } from "@/src/app/i18n/settings"
@@ -14,7 +14,7 @@ export default function SectionAbout({ lang }: { lang: Locale }) {
 
   return (
     <>
-      <SectionBadge>
+      <SectionBadge id="aboutBadge">
         <SectionBadge.Icon>
           <User2  height={12} width={12} className="mr-1"/> 
         </SectionBadge.Icon>
@@ -25,14 +25,19 @@ export default function SectionAbout({ lang }: { lang: Locale }) {
       <m.section
         id="about"
         ref={ref}
-        className="card mb-8 min-h-screen will-change-[transform,opacity] xl:mb-2"
+        className=" mb-12 will-change-[translate,opacity] transition-theme-and-fade"
         style={{
           transform: isInView ? "none" : "translateY(200px)",
           opacity: isInView ? 1 : 0,
-          transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.2s",
         }}
       >
-        {tSectionAbout("TEST")}
+        {tSectionAbout("DescriptionP1")} <br /><br />
+        {tSectionAbout("DescriptionP2")} <br /><br />
+        {tSectionAbout("DescriptionP3")} <br /><br />
+        {tSectionAbout("DescriptionP4")} <br /><br />
+        {tSectionAbout("DescriptionP5")} <br /><br />
+        {tSectionAbout("DescriptionP6")} <br /><br />
+        {tSectionAbout("DescriptionP7")} <br /><br />
       </m.section>
     </>
   )

@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { FolderGit2, Home, Lightbulb, Mail, User2 } from "lucide-react"
 import Link from "next/link"
@@ -30,8 +30,8 @@ export default function NavigationAside({lang}: { lang: Locale}) {
         const sections = document.querySelectorAll<HTMLDivElement>("section[id]")
         const scrollPosition = window.scrollY;
 
-        sections.forEach((section) => {
-          const sectionTop = section.offsetTop - 16; // Default Margin
+        sections.forEach((section, sectionIndex) => {
+          const sectionTop = sectionIndex === 0 ? 0 : section.offsetTop - 16; // Default Margin
           const sectionBottom = sectionTop + section.offsetHeight
 
           if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
@@ -66,7 +66,7 @@ export default function NavigationAside({lang}: { lang: Locale}) {
     <aside className="fixed right-8 top-1/2 hidden -translate-y-1/2 rounded-full border border-zinc-900 dark:border-gray-500 p-4 xl:block">
       <ul className="flex list-none flex-col">
         <li className="mb-2">
-          <Link href="/#intro" onClick={(event) => goToHash("#intro", event as any)} aria-label={tNavigationAside('link-intro')} title={tNavigationAside('link-intro')}>
+          <Link href="/#introBadge" onClick={(event) => goToHash("#intro", event as any)} aria-label={tNavigationAside('link-intro')} title={tNavigationAside('link-intro')}>
             <Home
               className={
                 currentHash === "#intro"
@@ -77,7 +77,7 @@ export default function NavigationAside({lang}: { lang: Locale}) {
           </Link>
         </li>
         <li className="my-2">
-          <Link href="/#about" onClick={(event) => goToHash("#about", event as any)} aria-label={tNavigationAside('link-about')} title={tNavigationAside('link-about')}>
+          <Link href="/#aboutBadge" onClick={(event) => goToHash("#about", event as any)} aria-label={tNavigationAside('link-about')} title={tNavigationAside('link-about')}>
             <User2
               className={
                 currentHash === "#about"
@@ -88,7 +88,7 @@ export default function NavigationAside({lang}: { lang: Locale}) {
           </Link>
         </li>
         <li className="my-2">
-          <Link href="/#skills" onClick={(event) => goToHash("#skills", event as any)} aria-label={tNavigationAside('link-skills')} title={tNavigationAside('link-skills')}>
+          <Link href="/#skillsBadge" onClick={(event) => goToHash("#skills", event as any)} aria-label={tNavigationAside('link-skills')} title={tNavigationAside('link-skills')}>
             <Lightbulb
               className={
                 currentHash === "#skills"
@@ -99,21 +99,10 @@ export default function NavigationAside({lang}: { lang: Locale}) {
           </Link>
         </li>
         <li className="my-2">
-          <Link href="/#projects" onClick={(event) => goToHash("#projects", event as any)} aria-label={tNavigationAside('link-projects')} title={tNavigationAside('link-projects')}>
+          <Link href="/#projectsBadge" onClick={(event) => goToHash("#projects", event as any)} aria-label={tNavigationAside('link-projects')} title={tNavigationAside('link-projects')}>
             <FolderGit2
               className={
                 currentHash === "#projects"
-                  ? "text-light-accent dark:text-dark-accent"
-                  : ""
-              }
-            />
-          </Link>
-        </li>
-        <li className="mt-2">
-          <Link href="/#contact" onClick={(event) => goToHash("#contact", event as any)} aria-label={tNavigationAside('link-contact')} title={tNavigationAside('link-contact')}>
-            <Mail
-              className={
-                currentHash === "#contact"
                   ? "text-light-accent dark:text-dark-accent"
                   : ""
               }

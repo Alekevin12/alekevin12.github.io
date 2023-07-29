@@ -6,6 +6,28 @@
   @apply bg-zinc-50 text-zinc-900 dark:bg-zinc-800 dark:text-white
   will-change-[background-color,color] transition-colors duration-300 ease-[cubic-bezier(0.17,0.55,0.55,1)]
 }
+.transition-theme-and-fade {
+  will-change: background-color, color, border-color, text-decoration-color, fill, stroke, transform, opacity;
+  transition: background-color 0.3s cubic-bezier(0.17,0.55,0.55,1) 0s, 
+              color 0.3s cubic-bezier(0.17,0.55,0.55,1) 0s, 
+              border-color 0.3s cubic-bezier(0.17,0.55,0.55,1) 0s, 
+              text-decoration-color 0.3s cubic-bezier(0.17,0.55,0.55,1) 0s, 
+              fill 0.3s cubic-bezier(0.17,0.55,0.55,1) 0s, 
+              stroke 0.3s cubic-bezier(0.17,0.55,0.55,1) 0s, 
+              transform 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.2s, 
+              opacity 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.2s;
+  
+}
+
+.transition-theme-and-hover {
+  will-change: background-color, color, border-color, text-decoration-color, fill, stroke;
+  transition: background-color 0.3s cubic-bezier(0.17,0.55,0.55,1) 0s, 
+              color 0.3s cubic-bezier(0.17,0.55,0.55,1) 0s, 
+              border-color 0.3s cubic-bezier(0.17,0.55,0.55,1) 0s, 
+              text-decoration-color 0.3s cubic-bezier(0.17,0.55,0.55,1) 0s, 
+              fill 0.3s cubic-bezier(0.17,0.55,0.55,1) 0s, 
+              stroke 0.3s cubic-bezier(0.17,0.55,0.55,1) 0s;
+}
 
 .card {
   @apply border-zinc-900 dark:border-gray-500 border rounded-2xl mb-4;
@@ -15,14 +37,10 @@
   @apply text-zinc-600 dark:text-gray-500
 }
 
-[data-test-id="CircularProgressbarWithChildren__children"] {
-  @apply top-0 !mt-0
-}
-
 .c-skillcard__standard {
-  @apply card !mb-0 flex-col text-center md:flex md:flex-row h-min items-center p-4 transition-all delay-200 duration-700 ease-[cubic-bezier(0.17,0.55,0.55,1)];
+  @apply card !mb-0 flex-col text-center md:flex md:flex-row h-min items-center p-4 transition-[translate,opacity] delay-200 duration-700 ease-[cubic-bezier(0.17,0.55,0.55,1)];
 }
 
 .c-skillcard__inline {
-  @apply card !mb-0 text-center flex flex-row h-min items-center p-4 transition-all delay-200 duration-700 ease-[cubic-bezier(0.17,0.55,0.55,1)]
+  @apply card !mb-0 text-center flex flex-row h-min items-center p-4 transition-[translate,opacity] delay-200 duration-700 ease-[cubic-bezier(0.17,0.55,0.55,1)]
 }
