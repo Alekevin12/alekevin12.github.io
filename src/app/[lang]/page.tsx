@@ -14,7 +14,7 @@ export default async function Page({
 }) {
   return (
     <>
-      <article className="flex flex-col w-full xl:px-12 md:p-4">
+      <article className="flex flex-col w-full xl:px-12 xl:pr-24 md:p-4">
         <SectionIntro lang={locale} />
         <SectionAbout lang={locale} />
         <SectionSkills lang={locale} />
