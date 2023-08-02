@@ -45,6 +45,8 @@ export default function NavigationAside({lang}: { lang: Locale}) {
 
     window.addEventListener("scroll", handleScroll)
 
+    handleScroll();
+
     return () => {
       window.removeEventListener("scroll", handleScroll)
       clearTimeout(timeoutId);
