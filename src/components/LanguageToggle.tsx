@@ -5,7 +5,7 @@ export function LanguageToggle({ lang }: { lang: Locale}) {
   return (
     <>
       <a href={lang} className="mx-1">
-        <Image height={18} src={i18n.flags[lang]} alt={lang} />
+        <Image height={24} src={i18n.flags[lang]} alt={lang} />
       </a>
     </>
   )
