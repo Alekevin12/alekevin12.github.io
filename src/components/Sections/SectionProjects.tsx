@@ -45,7 +45,7 @@ export default function SectionProjects({ lang }: { lang: Locale }) {
       <m.section
         id="projects"
         ref={ref}
-        className="mb-8 min-h-screen will-change-[translate,opacity] transition-theme-and-fade xl:mb-2 d-grid grid-col-1 md:grid-col-2"
+        className="mb-8 will-change-[translate,opacity] transition-theme-and-fade xl:mb-2 d-grid grid-col-1 md:grid-col-2"
         style={{
           transform: isInView ? "none" : "translateX(-200px)",
           opacity: isInView ? 1 : 0,
