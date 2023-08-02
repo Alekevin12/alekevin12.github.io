@@ -20,7 +20,7 @@ export default function ThemeToggle({ lang }: { lang: Locale }) {
   if (!hasMounted) return null;
   
   return (
-    <button className="absolute right-4 top-2 xl:right-2" onClick={toggleTheme} aria-label={tThemeToggle(`aria-label-${theme}`)} title={tThemeToggle(`aria-label-${theme}`)}>
+    <button className="ml-1 mr-2" onClick={toggleTheme} aria-label={tThemeToggle(`aria-label-${theme}`)} title={tThemeToggle(`aria-label-${theme}`)}>
       {theme === "light" ? <Moon /> : <Sun />}
     </button>
   )

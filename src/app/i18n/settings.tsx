@@ -1,5 +1,18 @@
+import en from '@/src/assets/Flags/en.svg';
+import it from '@/src/assets/Flags/it.svg';
+import fr from '@/src/assets/Flags/fr.svg';
+import de from '@/src/assets/Flags/de.svg';
+import es from '@/src/assets/Flags/es.svg';
+
 export const i18n = {
   locales: ['en', 'it', 'fr',  'de', 'es'],
+  flags: {
+    en,
+    it,
+    fr,
+    de,
+    es,
+  },
   defaultLocale: 'en',
   defaultNS: 'en',
 } as const

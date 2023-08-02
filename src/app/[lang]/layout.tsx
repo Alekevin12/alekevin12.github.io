@@ -11,6 +11,7 @@ import { Inter } from 'next/font/google';
 import { useTranslation } from '@/src/app/i18n/client';
 import { Analytics } from '@vercel/analytics/react';
 import { Footer } from '@/src/components/Footer';
+import { LanguageToggle } from '@/src/components/LanguageToggle';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -39,10 +40,15 @@ export default function RootLayout({
         <meta name='author' content='Alessandro Richetto' />
         <meta name='keywords' content='portfolio, CV, curriculum vitae, developer, web developer, fullstack developer, full-stack developer, full stack developer, open to work, angular developer, typescript developer, programming lover, front end developer, frontend developer' />
       </head>
-      <body className={`${inter.className} pt-8 overflow-x-hidden`}>
+      <body className={`${inter.className} pt-4 overflow-x-hidden`}>
         <Analytics />
         <Providers>
-          <ThemeToggle lang={locale} />
+          <nav className='flex justify-end'>
+            {i18n.locales.filter(loc => loc !== locale).map(loc => {
+              return <LanguageToggle key={loc} lang={loc}/>
+            })}
+            <ThemeToggle lang={locale} />
+          </nav>
           <main className='relative flex flex-col xl:flex-row container p-2 mx-auto'>
             <ProfileAside lang={locale} t={tProfileAside} />
             {children}

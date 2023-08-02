@@ -63,15 +63,15 @@ export default function SectionProjects({ lang }: { lang: Locale }) {
             <swiper-container className="bg-inherit m-auto" pagination="true" slides-per-view="1" centered-slides="true" pagination-clickable="false" observer="true" observe-slide-children="true" observe-parents="true" loop="true" autoplay="true">
               <swiper-slide>
                 { /* eslint-disable-next-line @next/next/no-img-element */}
-                <img className="m-0" height={300} alt={tSectionProjects('Avanzers.LoginAlt')} src={AvanzersLogin.src} onClick={() => openLightboxAtSlide(avanzersLightboxCtrl, setAvanzersLightboxCtrl, 1) } />
+                <img className="m-0" loading="lazy" height={300} alt={tSectionProjects('Avanzers.LoginAlt')} src={AvanzersLogin.src} onClick={() => openLightboxAtSlide(avanzersLightboxCtrl, setAvanzersLightboxCtrl, 1) } />
               </swiper-slide>
               <swiper-slide>
                 { /* eslint-disable-next-line @next/next/no-img-element */}
-                <img className="m-0" height={300} alt={tSectionProjects('Avanzers.DashboardAlt')} src={AvanzersDashboard.src} onClick={() => openLightboxAtSlide(avanzersLightboxCtrl, setAvanzersLightboxCtrl, 2) } />
+                <img className="m-0" loading="lazy" height={300} alt={tSectionProjects('Avanzers.DashboardAlt')} src={AvanzersDashboard.src} onClick={() => openLightboxAtSlide(avanzersLightboxCtrl, setAvanzersLightboxCtrl, 2) } />
               </swiper-slide>
               <swiper-slide>
                 { /* eslint-disable-next-line @next/next/no-img-element */}
-                <img className="m-0" height={300} alt={tSectionProjects('Avanzers.IncomingAlt')} src={AvanzersIncoming.src} onClick={() => openLightboxAtSlide(avanzersLightboxCtrl, setAvanzersLightboxCtrl, 3) } />
+                <img className="m-0" loading="lazy" height={300} alt={tSectionProjects('Avanzers.IncomingAlt')} src={AvanzersIncoming.src} onClick={() => openLightboxAtSlide(avanzersLightboxCtrl, setAvanzersLightboxCtrl, 3) } />
               </swiper-slide>
             </swiper-container>
           </div>
