@@ -1,3 +1,12 @@
 {
-  "### END ###": {}
+  "Title": "Projects",
+  "Avanzers": {
+    "Title": "The Avanzers",
+    "LoginAlt": "Login page",
+    "DashboardAlt": "Product dashboard",
+    "IncomingAlt": "List of donations to be distributed",
+    "Description": "A project funded by the Ministry of Agricultural, Food and Forestry Policies and promoted by the national ACLI. <br /> It focuses on various geographical areas, including Verona, Foggia, Padova, Mantova, Ancona, and Brescia. <br /><br /> The main objective of the project is to prevent food waste and ensure that unsold food items throughout the day are redistributed to those in need. Participants in the project include grocery stores, fruit and vegetable shops, bakeries, pizzerias, restaurants, and delicatessens. <br /><br />Often, at the end of the day, many food products, such as vegetables and fruits, are discarded because they have not been sold, are close to expiration, or have minor production or packaging defects. However, most of these foods are still perfectly edible. Throwing away such products would only result in unjustifiable waste and deprive those who lack the resources to purchase basic food. <br /><br />Thanks to &ldquo;The Avanzers&rdquo;, unsold food is collected directly from stores, markets, or restaurants and delivered to those who truly need it. This process helps reduce food waste, provide support to people in economic hardship, and ensure that no one is deprived of a nutritious meal.  <br /><br />Through collaboration between producers, nonprofit organizations, and the support of the &ldquo;The Avanzers&rdquo; project, an effective food redistribution system is created that promotes social solidarity and the fight against waste, contributing to improving people&apos;s quality of life and building a fairer and more sustainable community.",
+    "### END ###": null
+  },
+  "### END ###": null
 }

@@ -1,3 +1,12 @@
 {
-  "### END ###": {}
+  "Title": "Proyectos",
+  "Avanzers": {
+    "Title": "The Avanzers",
+    "LoginAlt": "Página de inicio de sesión",
+    "DashboardAlt": "Panel de control del producto",
+    "IncomingAlt": "Lista de donaciones por repartir",
+    "Description": "Un proyecto financiado por el Ministerio de Políticas Agrícolas, Alimentarias y Forestales y promovido por los ACLI nacionales. <br /> Se centra en diversas áreas geográficas, incluyendo Verona, Foggia, Padova, Mantua, Ancona y Brescia. <br /><br /> El objetivo principal del proyecto es prevenir el desperdicio de alimentos y asegurar que los alimentos no vendidos durante el día sean redistribuidos a quienes los necesitan. Los participantes en el proyecto incluyen tiendas de comestibles, fruterías, panaderías, pizzerías, restaurantes y charcuterías. <br /><br />A menudo, al final del día, se descartan muchos productos alimentarios, como verduras y frutas, porque no se han vendido, están cerca de la fecha de caducidad o tienen defectos menores de producción o envasado. Sin embargo, la mayoría de estos alimentos aún son perfectamente comestibles. Tirar estos productos sería solo un desperdicio injustificable y privaría a aquellos que carecen de recursos para comprar alimentos básicos. <br /><br />Gracias a &ldquo;The Avanzers&rdquo;, los alimentos no vendidos se recogen directamente en tiendas, mercados o restaurantes y se entregan a quienes realmente los necesitan. Este proceso ayuda a reducir el desperdicio de alimentos, proporciona apoyo a las personas en dificultades económicas y garantiza que nadie se quede sin una comida nutritiva. <br /><br />A través de la colaboración entre productores, organizaciones sin fines de lucro y el apoyo del proyecto &ldquo;The Avanzers&rdquo;, se crea un sistema efectivo de redistribución de alimentos que promueve la solidaridad social y la lucha contra el desperdicio, contribuyendo a mejorar la calidad de vida de las personas y construyendo una comunidad más justa y sostenible.",
+    "### END ###": null
+  },
+  "### END ###": null
 }

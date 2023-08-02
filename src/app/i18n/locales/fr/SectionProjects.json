@@ -1,3 +1,12 @@
 {
-  "### END ###": {}
+  "Title": "Projets",
+  "Avanzers": {
+    "Title": "The Avanzers",
+    "LoginAlt": "Page de connexion",
+    "DashboardAlt": "Tableau de bord du produit",
+    "IncomingAlt": "Liste de dons à distribuer",
+    "Description": "Un projet financé par le Ministère des Politiques Agricoles, Alimentaires et Forestières et promu par les ACLI nationales. <br /> Il se concentre sur différentes zones géographiques, dont Vérone, Foggia, Padoue, Mantoue, Ancône et Brescia. <br /><br /> L'objectif principal du projet est de prévenir le gaspillage alimentaire et de s'assurer que les produits alimentaires invendus tout au long de la journée soient redistribués à ceux dans le besoin. Les participants au projet comprennent des épiceries, des magasins de fruits et légumes, des boulangeries, des pizzerias, des restaurants et des épiceries fines. <br /><br />Souvent, à la fin de la journée, de nombreux produits alimentaires, tels que des légumes et des fruits, sont jetés car ils n'ont pas été vendus, sont proches de la date d'expiration ou présentent de légers défauts de production ou d'emballage. Cependant, la plupart de ces aliments sont encore parfaitement comestibles. Jeter de tels produits ne ferait qu'entraîner un gaspillage injustifiable et priverait ceux qui manquent de ressources pour acheter de la nourriture de base. <br /><br />Grâce à &ldquo;The Avanzers&rdquo;, les aliments invendus sont collectés directement auprès des magasins, des marchés ou des restaurants et livrés à ceux qui en ont vraiment besoin. Ce processus contribue à réduire le gaspillage alimentaire, à apporter un soutien aux personnes en difficulté économique et à garantir que personne ne soit privé d'un repas nutritif. <br /><br />Grâce à la collaboration entre les producteurs, les organisations à but non lucratif et le soutien du projet &ldquo;The Avanzers&rdquo;, un système efficace de redistribution alimentaire est créé, favorisant la solidarité sociale et la lutte contre le gaspillage, contribuant ainsi à améliorer la qualité de vie des personnes et à construire une communauté plus équitable et durable.",
+    "### END ###": null
+  },
+  "### END ###": null
 }

@@ -44,3 +44,11 @@
 .c-skillcard__inline {
   @apply card !mb-0 text-center flex flex-row h-min items-center p-4 transition-[translate,opacity] delay-200 duration-700 ease-[cubic-bezier(0.17,0.55,0.55,1)]
 }
+
+swiper-container {
+  @apply w-full max-w-full max-h-full min-w-0 min-h-0;
+}
+
+swiper-slide {
+  @apply !w-full shrink-0 block h-full max-h-full;
+}

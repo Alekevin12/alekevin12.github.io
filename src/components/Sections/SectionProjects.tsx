@@ -7,7 +7,6 @@ import { useRef, useState } from "react"
 import { SectionBadge } from "./SectionBadge"
 import { FolderGit2 } from "lucide-react"
 import { register } from 'swiper/element/bundle';
-import Image from "next/image";
 
 import AvanzersLogin from "@/src/assets/Projects/Avanzers/Login.jpg";
 import AvanzersIncoming from "@/src/assets/Projects/Avanzers/Incoming.jpg";
@@ -46,7 +45,7 @@ export default function SectionProjects({ lang }: { lang: Locale }) {
       <m.section
         id="projects"
         ref={ref}
-        className="mb-8 min-h-screen will-change-[translate,opacity] transition-theme-and-fade xl:mb-2"
+        className="mb-8 min-h-screen will-change-[translate,opacity] transition-theme-and-fade xl:mb-2 d-grid grid-col-1 md:grid-col-2"
         style={{
           transform: isInView ? "none" : "translateX(-200px)",
           opacity: isInView ? 1 : 0,
@@ -57,25 +56,33 @@ export default function SectionProjects({ lang }: { lang: Locale }) {
           // transitionTimingFunction: '',
         }}
       >
-        <section className="card w-full p-4 md:p-4">
-          <div className="w-64">
-            <swiper-container className="w-full bg-inherit">
+        
+        <h3 className="text-2xl md:text-3xl mb-2">{tSectionProjects('Avanzers.Title')}</h3>  
+        <section className="md:w-full flex flex-col card">
+          <div className="rounded-t-2xl overflow-hidden !m-0">
+            <swiper-container className="bg-inherit m-auto" pagination="true" slides-per-view="1" centered-slides="true" pagination-clickable="false" observer="true" observe-slide-children="true" observe-parents="true" loop="true" autoplay="true">
               <swiper-slide>
-                <a onClick={() => openLightboxAtSlide(avanzersLightboxCtrl, setAvanzersLightboxCtrl, 1) }>
-                  <Image height={300} alt="" src={AvanzersLogin} />
-                </a>
+                { /* eslint-disable-next-line @next/next/no-img-element */}
+                <img className="m-0" height={300} alt={tSectionProjects('Avanzers.LoginAlt')} src={AvanzersLogin.src} onClick={() => openLightboxAtSlide(avanzersLightboxCtrl, setAvanzersLightboxCtrl, 1) } />
               </swiper-slide>
               <swiper-slide>
-                <a onClick={() => openLightboxAtSlide(avanzersLightboxCtrl, setAvanzersLightboxCtrl, 2) }>
-                  <Image height={300} alt="" src={AvanzersDashboard} />
-                </a>
+                { /* eslint-disable-next-line @next/next/no-img-element */}
+                <img className="m-0" height={300} alt={tSectionProjects('Avanzers.DashboardAlt')} src={AvanzersDashboard.src} onClick={() => openLightboxAtSlide(avanzersLightboxCtrl, setAvanzersLightboxCtrl, 2) } />
               </swiper-slide>
               <swiper-slide>
-                <a onClick={() => openLightboxAtSlide(avanzersLightboxCtrl, setAvanzersLightboxCtrl, 3) }>
-                  <Image height={300} alt="" src={AvanzersIncoming} />
-                </a>
+                { /* eslint-disable-next-line @next/next/no-img-element */}
+                <img className="m-0" height={300} alt={tSectionProjects('Avanzers.IncomingAlt')} src={AvanzersIncoming.src} onClick={() => openLightboxAtSlide(avanzersLightboxCtrl, setAvanzersLightboxCtrl, 3) } />
               </swiper-slide>
             </swiper-container>
+          </div>
+          <div className="p-2">
+            <div className="my-2 mb-4">
+              <span className="rounded-full bg-zinc-800 dark:bg-zinc-50 hover:bg-dark-accent hover:dark:bg-dark-accent transition-theme-and-hover border-zinc-50 dark:border-zinc-800 dark:text-zinc-900 border text-white hover:text-white hover:dark:text-white p-1 px-2 me-2 text-xs md:text-sm">Angular</span>
+              <span className="rounded-full bg-zinc-800 dark:bg-zinc-50 hover:bg-dark-accent hover:dark:bg-dark-accent transition-theme-and-hover border-zinc-50 dark:border-zinc-800 dark:text-zinc-900 border text-white hover:text-white hover:dark:text-white p-1 px-2 me-2 text-xs md:text-sm">SASS</span>
+              <span className="rounded-full bg-zinc-800 dark:bg-zinc-50 hover:bg-dark-accent hover:dark:bg-dark-accent transition-theme-and-hover border-zinc-50 dark:border-zinc-800 dark:text-zinc-900 border text-white hover:text-white hover:dark:text-white p-1 px-2 me-2 text-xs md:text-sm">PHP</span>
+              <span className="rounded-full bg-zinc-800 dark:bg-zinc-50 hover:bg-dark-accent hover:dark:bg-dark-accent transition-theme-and-hover border-zinc-50 dark:border-zinc-800 dark:text-zinc-900 border text-white hover:text-white hover:dark:text-white p-1 px-2 me-2 text-xs md:text-sm">MariaDB</span>
+            </div>
+            <p dangerouslySetInnerHTML={{ __html: tSectionProjects('Avanzers.Description')}}></p>
           </div>
         </section>
       </m.section>
