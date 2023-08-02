@@ -19,7 +19,7 @@ export default function ProfileAside({t, lang}: {t: WithTranslation['t'], lang: 
           <a href="https://www.linkedin.com/in/arichetto/" target="_blank"> <Linkedin /> </a> 
         </li>
       </ul>
-      <button className="bg-dark-accent rounded-full w-full text-2xl hover:bg-dark-success transition-theme-and-hover py-2">
+      <button className="bg-dark-accent rounded-2xl w-full text-2xl hover:bg-dark-success transition-theme-and-hover p-2">
         {t('GetInTouch')}
       </button>
     </aside>
