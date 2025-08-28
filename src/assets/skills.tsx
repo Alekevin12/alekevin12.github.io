@@ -11,14 +11,17 @@ export const SkillsLanguages = [
   { icon: <SiSass        size={36} color='default' />, name: 'SASS',         skillLevel: 70, translateX: 80, translateY: 120 },
   { icon: <SiCss3        size={36} color='default' />, name: 'CSS3',         skillLevel: 70, translateX: 100, translateY: -100 },
   { icon: <SiTailwindcss size={36} color='default' />, name: 'Tailwind CSS', skillLevel: 65, translateX: 120, translateY: 150 },
+  { icon: <SiNestjs      size={36} color='default' />, name: 'NestJs',       skillLevel: 70, translateX: 179, translateY: 153 },
+  { icon: <SiDotnet      size={36} color='default' />, name: '.NET',         skillLevel: 70, translateX: -280, translateY: -30 },
+  { icon: <SiCsharp      size={36} color='default' />, name: 'C#',           skillLevel: 70, translateX: 40, translateY: 280 },
 ]
 
 export const SkillsBaseKnowledge = [
-  { icon: <SiLaravel size={36} color='default' />, name: 'Laravel', skillLevel: null, translateX: 200, translateY: -150 },
-  { icon: <SiExpress size={36} color='default' />, name: 'Express', skillLevel: null, translateX: 120, translateY: 250 },
-  { icon: <SiDotnet  size={36} color='default' />, name: '.NET',    skillLevel: null, translateX: -280, translateY: -30 },
-  { icon: <SiCsharp  size={36} color='default' />, name: 'C#',      skillLevel: null, translateX: 40, translateY: 280 },
-  { icon: <SiArduino size={36} color='default' />, name: 'Arduino', skillLevel: null, translateX: -80, translateY: 180 },
+  { icon: <SiLaravel    size={36} color='default' />, name: 'Laravel', skillLevel: null, translateX: 200, translateY: -150 },
+  { icon: <SiExpress    size={36} color='default' />, name: 'Express', skillLevel: null, translateX: 120, translateY: 250 },
+  { icon: <SiArduino    size={36} color='default' />, name: 'Arduino', skillLevel: null, translateX: -80, translateY: 180 },
+  { icon: <SiReact      size={36} color='default' />, name: 'React',   skillLevel: null, translateX: -260, translateY: 280 },
+  { icon: <SiNextdotjs  size={36} color='default' />, name: 'Next.js', skillLevel: null, translateX: 150, translateY: -260 },
 ]
 
 export const SkillsDatabases = [
@@ -71,9 +74,6 @@ export const SkillsOS = [
 ]
 
 export const SkillsLearning = [
-  { icon: <SiReact      size={36} color='default' />, name: 'React',      skillLevel: null, translateX: -260, translateY: 280 },
-  { icon: <SiNextdotjs  size={36} color='default' />, name: 'Next.js',    skillLevel: null, translateX: 150, translateY: -260 },
-  { icon: <SiNestjs     size={36} color='default' />, name: 'NestJs',     skillLevel: null, translateX: 179, translateY: 153 },
   { icon: <SiFastify    size={36} color='default' />, name: 'Fastify',    skillLevel: null, translateX: 257, translateY: -157 },
   { icon: <SiSpringboot size={36} color='default' />, name: 'Springboot', skillLevel: null, translateX: -120, translateY: 200 },
   { icon: <SiVuedotjs   size={36} color='default' />, name: 'Vue.js',     skillLevel: null, translateX: 200, translateY: -220 },
