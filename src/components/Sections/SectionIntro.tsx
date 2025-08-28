@@ -21,10 +21,7 @@ export default function SectionIntro({lang}: {lang: Locale}) {
       <m.section id="intro" className="my-12 xl:pr-12">
         <h2 className="text-3xl md:text-5xl xl:text-7xl"> {tSectionIntro('IntroFirstLine')} <span className="text-dark-accent">Alessandro</span></h2>
         <h3 className="text-xl md:text-3xl xl:text-5xl mb-6">{tSectionIntro('IntroSecondLine')}</h3>
-        <p className="text-muted mb-16">
-          Programmatore full stack appassionato e creativo con solida esperienza. <br />
-          Pronto a portare la vostra visione al vivo!
-        </p>
+        <p className="text-muted mb-16" dangerouslySetInnerHTML={{ __html: tSectionIntro('SmallDescriptionAboutMe') || '' }} />
         <div className="flex flex-col">
           <span className="text-dark-accent text-2xl md:text-4xl xl:text-6xl mb-2">
             5+
